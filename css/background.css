@@ -1,0 +1,46 @@
+/* Desktop-only view. 
+ * Largest mobile view is iPad Pro with 1366 in landscape mode
+ */
+@media only screen and (min-width:1367px) {
+  :root {
+    --bg-image-webp: url('../images/bg.webp');
+    --bg-image-jpg: url('../images/bg.jpg');
+    --bg-size: cover;
+    --bg-pos: center center;
+  }
+}
+/* Large mobile device screens */
+@media only screen and (max-width:1366px) {
+  :root {
+    --bg-image-webp: url('../images/bg.webp');
+    --bg-image-jpg: url('../images/bg.jpg');
+    --bg-pos: top center;
+    --bg-size: 100vw auto;
+  }
+}
+/* Load a smaller image for smaller screens */
+@media only screen and (max-width:970px) {
+  :root {
+    --bg-image-webp: url('../images/bg768.webp');
+    --bg-image-jpg: url('../images/bg768.jpg');
+  }
+}
+/* Smallest image for phone screens */
+@media only screen and (max-width:500px) {
+  :root {
+    --bg-image-webp: url('../images/bg375.webp');
+    --bg-image-jpg: url('../images/bg375.jpg');
+  }
+}
+body {
+  background-color: #fff;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+.webp body {
+  background: var(--bg-image-webp) var(--bg-pos) fixed no-repeat;
+  background-size: var(--bg-size);
+}
+.no-webp body {
+  background: var(--bg-image-jpg) var(--bg-pos) fixed / var(--bg-size) no-repeat;
+}
