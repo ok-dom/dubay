@@ -3,8 +3,8 @@
 }
 .phone-button {
     position: fixed;
-    right: 8px;
-    bottom: 15px;
+    right: 7px;
+    bottom: 14px;
     transform: translate(-50%, -50%);
     background: #5bc0de;
     border-radius: 50%;
