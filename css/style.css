@@ -1,14 +1,20 @@
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+/*@import url(https://fonts.googleapis.com/css?family=Dancing+Script);*/
 /* ---------------------------------------------------------------------------- */
 @font-face{
+font-family: 'Dancing Script';
+src: url('../font/YesevaOne-Regular_v2.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
 font-family: 'Roboto';
-src: url('../font/ZnikomitNo24.otf') format('opentype');
+src: url('../font/Nautilus.otf') format('opentype');
 font-weight: normal;
 font-style: normal;
 }
 @font-face{
 font-family: 'RobotoB';
-src: url('../font/Nautilus.otf') format('opentype');
+src: url('../font/KellySlab-Regular.otf') format('opentype');
 font-weight: normal;
 font-style: normal;
 }
@@ -80,6 +86,7 @@ hr.line-2{background: #333;max-width: 40px;height: 4px;}
 /*html, body {width:100%; padding:0; margin:0;}*/
 html, body { 
   min-height: 100%;
+  width:100%; padding:0; margin:0;
 }
 
 body {
@@ -91,13 +98,13 @@ body {
 
 @media (max-width: 480px) {
     body {
-        background-image: url('../images/bg375.jpg');
+        background-image: url('../images/bg900.jpg');
     }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
     body {
-        background-image: url('../images/bg768.jpg');
+        background-image: url('../images/bg900.jpg');
     }
 }
 

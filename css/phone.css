@@ -6,7 +6,7 @@
     right: 10px;
     bottom: 20px;
     transform: translate(-50%, -50%);
-    background: #5bc0de;
+    background: #ff0000;
     border-radius: 50%;
     width: 55px;
     height: 55px;
@@ -25,7 +25,7 @@
     display: block;
     position: absolute;
     border: 50%;
-    border: 1px solid #5bc0de;
+    border: 1px solid #ff0000;
     left: -20px;
     right: -20px;
     top: -20px;
