@@ -83,37 +83,8 @@ hr.line-2{background: #333;max-width: 40px;height: 4px;}
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
-/*html, body {width:100%; padding:0; margin:0;}*/
-html, body { 
-  min-height: 100%;
-  width:100%; padding:0; margin:0;
-}
-
-body {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    body {
-        background-image: url('../images/bg900.jpg');
-    }
-}
-
-@media (min-width: 481px) and (max-width: 1024px) {
-    body {
-        background-image: url('../images/bg900.jpg');
-    }
-}
-
-@media (min-width: 1025px) {
-	body {
-		background-image: url('../images/bg.jpg');
-	}
-}
-/*body {font: 14px/25px Arial, Helvetica, sans-serif;font-family: 'Open Sans', sans-serif;background: #F6F6F5 url("../images/bg.jpg") repeat 0 0;}*/
+html, body {width:100%; padding:0; margin:0;}
+body {font: 14px/25px Arial, Helvetica, sans-serif;font-family: 'Dancing Script', sans-serif;background: #F6F6F5 url("../images/bg.jpg") repeat 0 0;}
 body .wrap-body{}
 
 /* ---------------------------------------------------------------------------- */
