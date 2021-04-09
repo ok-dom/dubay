@@ -97,7 +97,7 @@ header .logo a{font-family: 'Dancing Script', cursive;font-size: 80px;color: #ff
 header .logo span{font-family: 'Roboto';font-size: 18px;}
 @media(max-width:767px){
 	header .logo{padding: 30px 0 20px;}
-	header .logo a{font-size: 55px;}
+	header .logo a{font-size: 50px;}
 	header .logo span{font-size: 16px;}
 }
 /* ---------------------------------------------------------------------------- */
