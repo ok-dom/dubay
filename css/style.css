@@ -305,9 +305,8 @@ border: 1px solid rgba(255, 255, 255, 0.7);bottom: 1em;content: '';left: 1em;opa
 
 
 
-
 .responsive {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
 }
