@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +47,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,7 +82,7 @@
 											<h3><span class="color-red">ТИГРОВЫЕ КРЕВЕТКИ НА ШПАЖКАХ</span></h3>
 										</div>
 										<p>Состав: Тигровые креветки, карамельный соус, унаги соус, икра тобико.</p><br>
-										<a class="button">380 руб.</a>
+										<a class="button">380 руб.</a><a class="button" onClick="orderAdd('ТИГРОВЫЕ КРЕВЕТКИ НА ШПАЖКАХ - 380 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,7 +107,7 @@
 											<h3><span class="color-red">ЛЮЛЯ КЕБАБ ПО-ТУРЕЦКИ</span></h3>
 										</div>
 										<p>Состав: Люля-кебаб из баранины, рис по-турецки, фирменный соус, сыр чеддер.</p><br>
-										<a class="button" >420 руб.</a>
+										<a class="button" >420 руб.</a><a class="button" onClick="orderAdd('ЛЮЛЯ КЕБАБ ПО-ТУРЕЦКИ - 420 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 											<h3><span class="color-red">САЛАТ "КАЛИФОРНИЯ"</span></h3>
 										</div>
 										<p>Состав: Микс салата, томаты чери, огурец, лук шалот, малосольная семга, сливочный сыр, авакадо, рыбные палочки, икра тобико, карамельный соус.</p><br>
-										<a class="button" >420 руб.</a>
+										<a class="button" >420 руб.</a><a class="button" onClick="orderAdd('САЛАТ КАЛИФОРНИЯ - 420 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -155,7 +157,7 @@
 											<h3><span class="color-red">МИНЬОН БУРГЕР</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, булочка, лук шалот, лист салата, маринованный огурец, сыр чеддер, помидор, соус спайси, картофель по-деревенски.</p><br>
-										<a class="button" >380 руб.</a>
+										<a class="button" >380 руб.</a><a class="button" onClick="orderAdd('МИНЬОН БУРГЕР - 380 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -181,5 +183,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>

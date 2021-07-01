@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,8 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +48,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,24 +83,24 @@
 											<h3><span class="color-red">ЧАИ ЗАВАРНЫЕ:</span></h3>
 										</div>
 										<br>
-										<p><a class="button">дикая вишня 200 руб.</a></p><br>
-										<p><a class="button">граф орлов 200 руб.</a></p><br>
-										<p><a class="button">улыбка гейши 200руб.</a></p><br>
-										<p><a class="button">лев 200 руб.</a></p><br>
-										<p><a class="button">ассам 200руб.</a></p><br>
-										<p><a class="button">черный с чабрецом 200 руб.</a></p><br>
-										<p><a class="button">сила самурая 200 руб.</a></p><br>
-										<p><a class="button">1001 ночь 200 руб.</a></p><br>
-										<p><a class="button">молочный улун 200 руб.</a></p><br>
-										<p><a class="button">нахальный фрукт 200 руб.</a></p><br/><br>
+										<p><a class="button">дикая вишня 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ дикая вишня 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">граф орлов 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ граф орлов 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">улыбка гейши 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ улыбка гейши 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">лев 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ лев 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ассам 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ ассам 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">черный с чабрецом 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ черный с чабрецом 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">сила самурая 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ сила самурая 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">1001 ночь 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ 1001 ночь 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">молочный улун 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ молочный улун 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">нахальный фрукт 200 руб.</a><a class="button" onClick="orderAdd('ЧАЙ нахальный фрукт 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br><br>
 										<div class="header">
 											<h3><span class="color-red">ЧАИ ФРУКТОВЫЕ:</span></h3>
 										</div>
 										<br>
-										<p><a class="button">манго-маракуя 300 руб.</a></p><br>
-										<p><a class="button">ягодный 300 руб.</a></p><br>
-										<p><a class="button">ананас-маракуя 300 руб.</a></p><br>
-										<p><a class="button">цитрусовый 300 руб.</a></p>
+										<p><a class="button">манго-маракуя 300 руб.</a><a class="button" onClick="orderAdd('ЧАЙ манго-маракуя 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ягодный 300 руб.</a><a class="button" onClick="orderAdd('ЧАЙ ягодный 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ананас-маракуя 300 руб.</a><a class="button" onClick="orderAdd('ЧАЙ ананас-маракуя 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">цитрусовый 300 руб.</a><a class="button" onClick="orderAdd('ЧАЙ цитрусовый 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -122,7 +125,7 @@
 											<h3><span class="color-red">КАПУЧЧИНО</span></h3>
 										</div>
 										<br>
-										<a class="button" >60 руб.</a>
+										<a class="button" >60 руб.</a><a class="button" onClick="orderAdd('КАПУЧЧИНО - 60 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -147,7 +150,7 @@
 											<h3><span class="color-red">МОРОЖЕНОЕ ШОКОЛАДНОЕ, ВАНИЛЬНОЕ</span></h3>
 										</div>
 										<br>
-										<a class="button" >200 руб.</a>
+										<a class="button" >200 руб.</a><a class="button" onClick="orderAdd('МОРОЖЕНОЕ ШОКОЛАДНОЕ, ВАНИЛЬНОЕ - 200 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -172,11 +175,11 @@
 											<h3><span class="color-red">МОЛОЧНЫЕ КОКТЕЙЛИ:</span></h3>
 										</div>
 										<br>
-										<p><a class="button">ванильный (0,4 л.) 150 руб.</a></p><br>
-										<p><a class="button">шоколадный (0,4 л.) 150 руб.</a></p><br>
-										<p><a class="button">клубничный (0,4 л.) 150 руб.</a></p><br>
-										<p><a class="button">банановый (0,4 л.) 150 руб.</a></p><br>
-										<p><a class="button">сникерс (0,4 л.) 230 руб.</a></p>
+										<p><a class="button">ванильный (0,4 л.) 150 руб.</a><a class="button" onClick="orderAdd('КОКТЕЙЛЬ ванильный (0,4 л.) 150 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">шоколадный (0,4 л.) 150 руб.</a><a class="button" onClick="orderAdd('КОКТЕЙЛЬ шоколадный (0,4 л.) 150 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">клубничный (0,4 л.) 150 руб.</a><a class="button" onClick="orderAdd('КОКТЕЙЛЬ клубничный (0,4 л.) 150 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">банановый (0,4 л.) 150 руб.</a><a class="button" onClick="orderAdd('КОКТЕЙЛЬ банановый (0,4 л.) 150 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">сникерс (0,4 л.) 230 руб.</a><a class="button" onClick="orderAdd('КОКТЕЙЛЬ сникерс (0,4 л.) 230 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -201,10 +204,10 @@
 											<h3><span class="color-red">СОКИ СВЕЖЕВЫЖАТЫЕ:</span></h3>
 										</div>
 										<br>
-										<p><a class="button">апельсиновый (0,4 л.) 250 руб.</a></p><br>
-										<p><a class="button">яблочный (0,4 л.) 230 руб.</a></p><br>
-										<p><a class="button">ананасовый (0,4 л.) 300 руб.</a></p><br>
-										<p><a class="button">грейфрут (0,4 л.) 250 руб.</a></p>
+										<p><a class="button">апельсиновый (0,4 л.) 250 руб.</a><a class="button" onClick="orderAdd('СОК апельсиновый (0,4 л.) 250 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">яблочный (0,4 л.) 230 руб.</a><a class="button" onClick="orderAdd('СОК яблочный (0,4 л.) 230 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ананасовый (0,4 л.) 300 руб.</a><a class="button" onClick="orderAdd('СОК ананасовый (0,4 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">грейфрут (0,4 л.) 250 руб.</a><a class="button" onClick="orderAdd('СОК грейфрут (0,4 л.) 250 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -229,12 +232,12 @@
 											<h3><span class="color-red">МОХИТО:</span></h3>
 										</div>
 										<br>
-										<p><a class="button">классический (0,4 л.) 180 руб.</a></p><br>
-										<p><a class="button">ягодный (0,4 л.) 180 руб.</a></p><br>
-										<p><a class="button">малиновый (0,4 л.) 180 руб.</a></p><br>
-										<p><a class="button">клубничный (0,4 л.) 180 руб.</a></p><br>
-										<p><a class="button">апельсиновый (0,4 л.) 180 руб.</a></p><br>
-										<p><a class="button">киви (0,4 л.) 180 руб.</a></p>
+										<p><a class="button">классический (0,4 л.) 180 руб.</a><a class="button" onClick="orderAdd('МОХИТО классический (0,4 л.) 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ягодный (0,4 л.) 180 руб.</a><a class="button" onClick="orderAdd('МОХИТО ягодный (0,4 л.) 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">малиновый (0,4 л.) 180 руб.</a><a class="button" onClick="orderAdd('МОХИТО малиновый (0,4 л.) 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">клубничный (0,4 л.) 180 руб.</a><a class="button" onClick="orderAdd('МОХИТО клубничный (0,4 л.) 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">апельсиновый (0,4 л.) 180 руб.</a><a class="button" onClick="orderAdd('МОХИТО апельсиновый (0,4 л.) 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">киви (0,4 л.) 180 руб.</a><a class="button" onClick="orderAdd('МОХИТО киви (0,4 л.) 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -259,18 +262,18 @@
 											<h3><span class="color-red">ДОМАШНИЙ ЛИМОНАД:</span></h3>
 										</div>
 										<br>
-										<p><a class="button">грушевый (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">ягодный (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">яблочный (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">клубничный (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">апельсиновый (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">цитрусовый (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">ассорти (1 л.) 400 руб.</a></p><br>
-										<p><a class="button">ананасовый (1 л.) 300 руб.</a></p><br>
-										<p><a class="button">малина маракуя (1 л.) 400 руб.</a></p><br>
-										<p><a class="button">манго маракуя (1 л.) 400 руб.</a></p><br>
-										<p><a class="button">ананас маракуя (1 л.) 400 руб.</a></p><br>
-										<p><a class="button">кюрасава (1 л.) 300 руб.</a></p><br>
+										<p><a class="button">грушевый (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД грушевый (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ягодный (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД ягодный (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">яблочный (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД яблочный (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">клубничный (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД клубничный (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">апельсиновый (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД апельсиновый (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">цитрусовый (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД цитрусовый (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ассорти (1 л.) 400 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД ассорти (1 л.) 400 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ананасовый (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД ананасовый (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">малина маракуя (1 л.) 400 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД малина маракуя (1 л.) 400 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">манго маракуя (1 л.) 400 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД манго маракуя (1 л.) 400 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">ананас маракуя (1 л.) 400 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД ананас маракуя (1 л.) 400 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button">кюрасава (1 л.) 300 руб.</a><a class="button" onClick="orderAdd('ЛИМОНАД кюрасава (1 л.) 300 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
 									</div>
 								</div>
 							</div>
@@ -296,5 +299,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>

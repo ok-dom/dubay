@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +47,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,7 +82,7 @@
 											<h3><span class="color-red">МЯСНОЕ АССОРТИ</span></h3>
 										</div>
 										<p>Состав: Телячьи медальоны, каре ягненка, стейк рибай, куриные крылышки, турецкая лепешка, свежий салатик, фирменные соусы, маринованный лук.</p><br>
-										<a class="button">1800 руб.</a>
+										<a class="button">1800 руб.</a><a class="button" onClick="orderAdd('МЯСНОЕ АССОРТИ - 1800 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,7 +107,7 @@
 											<h3><span class="color-red">ШАШЛЫКИ ИЗ ТЕЛЯЧЬЕЙ ВЫРЕЗКИ</span></h3>
 										</div>
 										<p>Состав: Вырезка телячья, турецкая лепешка, лепешка с баклажаном, маринованный лук, фирменный соус.</p><br>
-										<a class="button" >990 руб.</a>
+										<a class="button" >990 руб.</a><a class="button" onClick="orderAdd('ШАШЛЫКИ ИЗ ТЕЛЯЧЬЕЙ ВЫРЕЗКИ - 990 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 											<h3><span class="color-red">МЯСНОЕ ПЛАТО</span></h3>
 										</div>
 										<p>Состав: Стейк "Дубай", стейк из семги, мидии, куриный стейк, тигровые креветки, грибы шампиньоны, фирменные соусы, лепешка с баклажаном, цезарь лепешка.</p><br>
-										<a class="button" >2500 руб.</a>
+										<a class="button" >2500 руб.</a><a class="button" onClick="orderAdd('МЯСНОЕ ПЛАТО - 2500 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -155,7 +157,7 @@
 											<h3><span class="color-red">АССОРТИ ИЗ ГАЛУШЕК</span></h3>
 										</div>
 										<p>Состав: Галушки кукурузные, галушки мучные, антрекот говяжий, курица, сушеная говядина, сушеная колбаса, ба1ар, соус чесночный, картофельно-луковый соус.</p><br>
-										<a class="button" >2000 руб.</a>
+										<a class="button" >2000 руб.</a><a class="button" onClick="orderAdd('АССОРТИ ИЗ ГАЛУШЕК - 2000 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -180,7 +182,7 @@
 											<h3><span class="color-red">VIP АССОРТИ ЧАША</span></h3>
 										</div>
 										<p>Состав: Вырезка телячья, картофель, грибы шампиньоны, томаты чери, баранина, кукуруза.</p><br>
-										<a class="button">2600 руб.</a>
+										<a class="button">2600 руб.</a><a class="button" onClick="orderAdd('VIP АССОРТИ ЧАША - 2600 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -204,12 +206,11 @@
 										<div class="header">
 											<h3><span class="color-red">САДЖ</span></h3>
 										</div>
-										<br>
-										<p><a class="button" >из телятины 630 руб.</a></p><br>
-										<p><a class="button" >из курицы 590 руб.</a></p><br>
-										<p><a class="button" >из баранины 660 руб.</a></p><br>
-										<p><a class="button" >трех видов 1500 руб.</a></p><br>
 										<p>Состав: Картофель, баклажан, цукини, болгарский перец, грибы шампиньоны, зелень, лепешка с баклажаном.</p><br>
+										<p><a class="button" >из телятины 630 руб.</a><a class="button" onClick="orderAdd('САДЖ из телятины 630 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button" >из курицы 590 руб.</a><a class="button" onClick="orderAdd('САДЖ из курицы 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button" >из баранины 660 руб.</a><a class="button" onClick="orderAdd('САДЖ из баранины 660 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p></br>
+										<p><a class="button" >трех видов 1500 руб.</a><a class="button" onClick="orderAdd('САДЖ трех видов 1500 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -234,7 +235,7 @@
 											<h3><span class="color-red">СЕТ ШАШЛЫКОВ</span></h3>
 										</div>
 										<p>Состав: Люля-кебаб из баранины, шашлык из баранины, шашлык из курицы, шампиньоны на мангале, фирменный соус, лук маринованный.</p><br>
-										<a class="button" >1700 руб.</a>
+										<a class="button" >1700 руб.</a><a class="button" onClick="orderAdd('СЕТ ШАШЛЫКОВ - 1700 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -260,5 +261,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>

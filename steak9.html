@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +47,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,7 +82,7 @@
 											<h3><span class="color-red">МЕДАЛЬОНЫ ИЗ ТЕЛЯТИНЫ С ОВОЩНЫМ САЛАТОМ (220 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, картофель ассорти, фирменные соусы, овощной салат.</p><br>
-										<a class="button">590 руб.</a>
+										<a class="button">590 руб.</a><a class="button" onClick="orderAdd('МЕДАЛЬОНЫ ИЗ ТЕЛЯТИНЫ С ОВОЩНЫМ САЛАТОМ (220 гр.) - 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,7 +107,7 @@
 											<h3><span class="color-red">СТЕЙК ПОД ФИРМЕННЫМ СОУСОМ (420 гр.)</span></h3>
 										</div>
 										<p>Состав: Говяжий антрекот, рис по-турецки, лепешка, соус фирменный.</p><br>
-										<a class="button" >590 руб.</a>
+										<a class="button" >590 руб.</a><a class="button" onClick="orderAdd('СТЕЙК ПОД ФИРМЕННЫМ СОУСОМ (420 гр.) - 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 											<h3><span class="color-red">МАДАЛЬОНЫ ПОД СЛИВОЧНО-ГРИБНЫМ СОУСОМ (220 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, микс салата, сливочно - грибной соус, картофель ассорти, томаты чери.</p><br>
-										<a class="button" >560 руб.</a>
+										<a class="button" >560 руб.</a><a class="button" onClick="orderAdd('МАДАЛЬОНЫ ПОД СЛИВОЧНО-ГРИБНЫМ СОУСОМ (220 гр.) - 560 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -155,7 +157,7 @@
 											<h3><span class="color-red">МАХ РИБАЙ (450 гр.)</span></h3>
 										</div>
 										<p>Состав: Говяжий антрекот, куриные яйца, турецкая лепешка, соус шашлычный, соус сливочный.</p><br>
-										<a class="button" >590 руб.</a>
+										<a class="button" >590 руб.</a><a class="button" onClick="orderAdd('МАХ РИБАЙ (450 гр.) - 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -180,7 +182,7 @@
 											<h3><span class="color-red">СТЕЙК ИЗ ФИЛЕ КУРИЦЫ (300 гр.)</span></h3>
 										</div>
 										<p>Состав: Куриное филе, картофель ассорти, кисло-сладкий соус, салат романо.</p><br>
-										<a class="button">440 руб.</a>
+										<a class="button">440 руб.</a><a class="button" onClick="orderAdd('СТЕЙК ИЗ ФИЛЕ КУРИЦЫ (300 гр.) - 440 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -205,7 +207,7 @@
 											<h3><span class="color-red">СТЕЙК РИБАЙ (420 гр.)</span></h3>
 										</div>
 										<p>Состав: Говяжий антрекот, кукуруза, фирменный соус.</p><br>
-										<a class="button" >540 руб.</a>
+										<a class="button" >540 руб.</a><a class="button" onClick="orderAdd('СТЕЙК РИБАЙ (420 гр.) - 540 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -230,7 +232,7 @@
 											<h3><span class="color-red">СТЕЙК ТИ-БОН (450 гр.)</span></h3>
 										</div>
 										<p>Состав: Говяжий антрекот, кукуруза, фирменный соус.</p><br>
-										<a class="button" >550 руб.</a>
+										<a class="button" >550 руб.</a><a class="button" onClick="orderAdd('СТЕЙК ТИ-БОН (450 гр.) - 550 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -255,7 +257,7 @@
 											<h3><span class="color-red">СТЕЙК "ДУБАЙ" (560 гр.)</span></h3>
 										</div>
 										<p>Состав: Говяжий антрекот, кукуруза, фирменный соус, яйцо.</p><br>
-										<a class="button" >620 руб.</a>
+										<a class="button" >620 руб.</a><a class="button" onClick="orderAdd('СТЕЙК ДУБАЙ (560 гр.) - 620 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -280,7 +282,7 @@
 											<h3><span class="color-red">ФИЛЕ МИНЬОН (220 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, кукуруза, фирменный соус.</p><br>
-										<a class="button">560 руб.</a>
+										<a class="button">560 руб.</a><a class="button" onClick="orderAdd('ФИЛЕ МИНЬОН (220 гр.) - 560 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -305,7 +307,7 @@
 											<h3><span class="color-red">РЕЛАКС (300 гр.)</span></h3>
 										</div>
 										<p>Состав: Говяжий стейк, картофель ассорти, куриные яйца, соус "Тысяча островов", микс салата.</p><br>
-										<a class="button" >580 руб.</a>
+										<a class="button" >580 руб.</a><a class="button" onClick="orderAdd('РЕЛАКС (300 гр.) - 580 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -330,7 +332,7 @@
 											<h3><span class="color-red">ТЕЛЯЧЬИ МЕДАЛЬОНЫ (220 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, картофель ассорти, лук маринованный, фирменные соусы, салат с овощами, лепешка турецкая.</p><br>
-										<a class="button" >570 руб.</a>
+										<a class="button" >570 руб.</a><a class="button" onClick="orderAdd('ТЕЛЯЧЬИ МЕДАЛЬОНЫ (220 гр.) - 570 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -355,7 +357,7 @@
 											<h3><span class="color-red">РАДУЖНАЯ ФОРЕЛЬ С ОВОЩАМИ</span></h3>
 										</div>
 										<p>Состав: Овощи на гриле, форель, лимон, соус тар-тар.</p><br>
-										<a class="button" >490 руб.</a>
+										<a class="button" >490 руб.</a><a class="button" onClick="orderAdd('РАДУЖНАЯ ФОРЕЛЬ С ОВОЩАМИ - 490 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -380,7 +382,7 @@
 											<h3><span class="color-red">СТЕЙК ИЗ ЛОСОСЯ</span></h3>
 										</div>
 										<p>Состав: Лосось, лимон, соус тар-тар, лепешка цезарь.</p><br>
-										<a class="button">640 руб.</a>
+										<a class="button">640 руб.</a><a class="button" onClick="orderAdd('СТЕЙК ИЗ ЛОСОСЯ - 640 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -406,5 +408,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>

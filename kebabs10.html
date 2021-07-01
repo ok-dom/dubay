@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +47,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,7 +82,7 @@
 											<h3><span class="color-red">ЛЮЛЯ-КЕБАБ ИЗ БАРАНИНЫ (300 гр.)</span></h3>
 										</div>
 										<p>Состав: Люля-кебаб, маринованный лук, фирменный соус.</p><br>
-										<a class="button">360 руб.</a>
+										<a class="button">360 руб.</a><a class="button" onClick="orderAdd('ЛЮЛЯ-КЕБАБ ИЗ БАРАНИНЫ (300 гр.) - 360 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,7 +107,7 @@
 											<h3><span class="color-red">ШАШЛЫК ИЗ ТРЕХ ВИДОВ МЯСА (350 гр.)</span></h3>
 										</div>
 										<p>Состав: Баранина, курица, телятина, картофель ассорти, лук маринованный, овощной салатик, фирменный соус.</p><br>
-										<a class="button" >490 руб.</a>
+										<a class="button" >490 руб.</a><a class="button" onClick="orderAdd('ШАШЛЫК ИЗ ТРЕХ ВИДОВ МЯСА (350 гр.) - 490 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 											<h3><span class="color-red">ЛЮЛЯ-КЕБАБ ПО-ДУБАЙСКИ (250 гр.)</span></h3>
 										</div>
 										<p>Состав: Люля-кебаб из баранины, лук маринованный, картофель ассорти, рулетик с баклажаном, фирменный соус.</p><br>
-										<a class="button" >390 руб.</a>
+										<a class="button" >390 руб.</a><a class="button" onClick="orderAdd('ЛЮЛЯ-КЕБАБ ПО-ДУБАЙСКИ (250 гр.) - 390 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -155,7 +157,7 @@
 											<h3><span class="color-red">КОРОЛЕВСКИЙ ШАШЛЫК (300 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, турецкая лепешка, маринованный лук, овощной салатик, фирменный соус.</p><br>
-										<a class="button" >590 руб.</a>
+										<a class="button" >590 руб.</a><a class="button" onClick="orderAdd('КОРОЛЕВСКИЙ ШАШЛЫК (300 гр.) - 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -180,7 +182,7 @@
 											<h3><span class="color-red">ШАШЛЫК ИЗ КУРИЦЫ (350 гр.)</span></h3>
 										</div>
 										<p>Состав: Курица, маринованный лук, фирменный соус.</p><br>
-										<a class="button">350 руб.</a>
+										<a class="button">350 руб.</a><a class="button" onClick="orderAdd('ШАШЛЫК ИЗ КУРИЦЫ (350 гр.) - 350 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -205,7 +207,7 @@
 											<h3><span class="color-red">ШАШЛЫК ИЗ БАРАНИНЫ (350 гр.)</span></h3>
 										</div>
 										<p>Состав: Баранина, маринованный лук, фирменный соус.</p><br>
-										<a class="button" >520 руб.</a>
+										<a class="button" >520 руб.</a><a class="button" onClick="orderAdd('ШАШЛЫК ИЗ БАРАНИНЫ (350 гр.) - 520 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -230,7 +232,7 @@
 											<h3><span class="color-red">ШАШЛЫК ИЗ ЛОСОСЯ (220 гр.)</span></h3>
 										</div>
 										<p>Состав: Лосось, лимон, микс салата, соус тар-тар.</p><br>
-										<a class="button" >590 руб.</a>
+										<a class="button" >590 руб.</a><a class="button" onClick="orderAdd('ШАШЛЫК ИЗ ЛОСОСЯ (220 гр.) - 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -255,7 +257,7 @@
 											<h3><span class="color-red">VIP ШАШЛЫК (350 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, тигровые креветки, лосось, курица, овощи, морковный салат, лимон, фирменный соус.</p><br>
-										<a class="button" >590 руб.</a>
+										<a class="button" >590 руб.</a><a class="button" onClick="orderAdd('VIP ШАШЛЫК (350 гр.) - 590 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -280,7 +282,7 @@
 											<h3><span class="color-red">ТЕЛЯЧИЙ ШАШЛЫК С ОВОЩАМИ (350 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, овощи, картофель ассорти, фирменный соус, маринованный лук.</p><br>
-										<a class="button">570 руб.</a>
+										<a class="button">570 руб.</a><a class="button" onClick="orderAdd('ТЕЛЯЧИЙ ШАШЛЫК С ОВОЩАМИ (350 гр.) - 570 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -305,7 +307,7 @@
 											<h3><span class="color-red">ШАШЛЫК ИЗ ТЕЛЯТИНЫ (300 гр.)</span></h3>
 										</div>
 										<p>Состав: Телячья вырезка, маринованный лук, фирменный соус, лепешка с баклажаном.</p><br>
-										<a class="button" >490 руб.</a>
+										<a class="button" >490 руб.</a><a class="button" onClick="orderAdd('ШАШЛЫК ИЗ ТЕЛЯТИНЫ (300 гр.) - 490 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -331,5 +333,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>

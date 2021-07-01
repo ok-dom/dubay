@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +47,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,7 +82,7 @@
 											<h3><span class="color-red">СУП ИЗ ПЕРСИДСКОЙ ЧЕЧЕВИЦЫ</span></h3>
 										</div>
 										<p>Состав: Сухари из багета, лимон, острый соус.</p><br>
-										<a class="button">250 руб.</a>
+										<a class="button">250 руб.</a><a class="button" onClick="orderAdd('СУП ИЗ ПЕРСИДСКОЙ ЧЕЧЕВИЦЫ - 250 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,7 +107,7 @@
 											<h3><span class="color-red">КУРИНЫЙ СУП</span></h3>
 										</div>
 										<p>Состав: Филе цыпленка, картофель, болгарский перец, яичная лапша.</p><br>
-										<a class="button" >150 руб.</a>
+										<a class="button" >150 руб.</a><a class="button" onClick="orderAdd('КУРИНЫЙ СУП - 150 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 											<h3><span class="color-red">СУП "ДАРЫ МОРЯ"</span></h3>
 										</div>
 										<p>Состав: Лосось, тигровые креветки, мидии, лук порей, томаты в соку.</p><br>
-										<a class="button" >360 руб.</a>
+										<a class="button" >360 руб.</a><a class="button" onClick="orderAdd('СУП ДАРЫ МОРЯ - 360 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -155,7 +157,7 @@
 											<h3><span class="color-red">СУП ТОМ ЯМ</span></h3>
 										</div>
 										<p>Состав: Паста том ям, кокосовое молоко, тигровые креветки, рис жасмин, томаты чери, лайм, лук порей.</p><br>
-										<a class="button" >290 руб.</a>
+										<a class="button" >290 руб.</a><a class="button" onClick="orderAdd('СУП ТОМ ЯМ - 290 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -180,7 +182,7 @@
 											<h3><span class="color-red">ГРИБНОЙ КРЕМ-СУП</span></h3>
 										</div>
 										<p>Состав: Картофель, грибы шампиньоны, сливы, сухари из багета.</p><br>
-										<a class="button" >250 руб.</a>
+										<a class="button" >250 руб.</a><a class="button" onClick="orderAdd('ГРИБНОЙ КРЕМ-СУП - 250 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -205,7 +207,7 @@
 											<h3><span class="color-red">УКРАИНСКИЙ БОРЩ</span></h3>
 										</div>
 										<p>Состав: Говядина, картофель, свекла, морковь, сметана, лепешка.</p><br>
-										<a class="button" >180 руб.</a>
+										<a class="button" >180 руб.</a><a class="button" onClick="orderAdd('УКРАИНСКИЙ БОРЩ - 180 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -231,5 +233,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>

@@ -1,31 +1,28 @@
-.fa{
-	vertical-align: middle;
-}
-.phone-button {
+.basket-button {
     position: fixed;
-    right: 0px;
-    bottom: 0px;
+    left: 52px;
+    top: 30px;
     transform: translate(-50%, -50%);
-    background: #ff0000;
+    background: #25D366;
     border-radius: 50%;
     width: 55px;
     height: 55px;
     color: #fff;
     text-align: center;
     line-height: 50px;
-    font-size: 30px;
+    font-size: 20px;
     z-index: 9999;
 }
-.phone-button a {
+.basket-button a {
     color: #fff;
 }
-.phone-button:before,
-.phone-button:after {
+.basket-button:before,
+.basket-button:after {
     content: " ";
     display: block;
     position: absolute;
     border: 50%;
-    border: 1px solid #ff0000;
+    border: 1px solid #25D366;
     left: -20px;
     right: -20px;
     top: -20px;
@@ -35,10 +32,10 @@
     opacity: 0;
     backface-visibility: hidden; 
 }
-.phone-button:after{
+.basket-button:after{
     animation-delay: .5s;
 }
-.phone-button i {
+.basket-button i {
         color:#fff;
         transition:.3s;
         animation: 3000ms ease 0s normal none 1 running shake;
@@ -119,8 +116,8 @@
 }
 }
 @media (max-width : 800px) {  
-.phone-button {   
-    bottom: 0px; /*отступ кнопки снизу от экрана*/
-    right: 0px; /*отступ кнопки слева от экрана(right - справа)*/
+.basket-button {  
+    top: 30px;
+    left: 52px;
   }
 }

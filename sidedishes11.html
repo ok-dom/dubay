@@ -2,7 +2,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/phone.css">
 	<link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/basket-button.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	
 	<!-- Custom Fonts -->
@@ -46,6 +47,7 @@
 </head>
 
 <body>
+<a href="basket.html" title="Корзина заказа" rel="noopener noreferrer"><div class="basket-button"><i class="fa fa-shopping-basket"></i><span id="count"></span></div></a>
 <a href="https://api.whatsapp.com/send?phone=79288883178" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer"><div class="whatsapp-button"><i class="fa fa-whatsapp"></i></div></a>
 <a href="tel:+79288883178" title="Позвонить"><div class="phone-button"><i class="fa fa-phone"></i></div></a>
 <div class="wrap-body">
@@ -80,7 +82,7 @@
 											<h3><span class="color-red">КАРТОФЕЛЬ ПО-ДЕРЕВЕНСКИ (180 гр.)</span></h3>
 										</div>
 										<br>
-										<a class="button">90 руб.</a>
+										<a class="button">90 руб.</a><a class="button" onClick="orderAdd('КАРТОФЕЛЬ ПО-ДЕРЕВЕНСКИ (180 гр.) - 90 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,7 +107,7 @@
 											<h3><span class="color-red">КАРТОФЕЛЬ ФРИ (180 гр.)</span></h3>
 										</div>
 										<br>
-										<a class="button" >90 руб.</a>
+										<a class="button" >90 руб.</a><a class="button" onClick="orderAdd('КАРТОФЕЛЬ ФРИ (180 гр.) - 90 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 											<h3><span class="color-red">КАРТОФЕЛЬ ПО-ДЕРЕВЕНСКИ НА ТАРЕЛКЕ (250 гр.)</span></h3>
 										</div>
 										<br>
-										<a class="button" >130 руб.</a>
+										<a class="button" >130 руб.</a><a class="button" onClick="orderAdd('КАРТОФЕЛЬ ПО-ДЕРЕВЕНСКИ НА ТАРЕЛКЕ (250 гр.) - 130 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -155,7 +157,7 @@
 											<h3><span class="color-red">КАРТОФЕЛЬ ФРИ НА ТАРЕЛКЕ (250 гр.)</span></h3>
 										</div>
 										<br>
-										<a class="button" >130 руб.</a>
+										<a class="button" >130 руб.</a><a class="button" onClick="orderAdd('КАРТОФЕЛЬ ФРИ НА ТАРЕЛКЕ (250 гр.) - 130 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -182,7 +184,7 @@
 											<h3><span class="color-red">РИС ПО-ТУРЕЦКИ (200 гр.)</span></h3>
 										</div>
 										<br>
-										<a class="button">140 руб.</a>
+										<a class="button">140 руб.</a><a class="button" onClick="orderAdd('РИС ПО-ТУРЕЦКИ (200 гр.) - 140 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -207,7 +209,7 @@
 											<h3><span class="color-red">ШАМПИНЬОНЫ НА МАНГАЛЕ (250 гр.)</span></h3>
 										</div>
 										<br>
-										<a class="button" >250 руб.</a>
+										<a class="button" >250 руб.</a><a class="button" onClick="orderAdd('ШАМПИНЬОНЫ НА МАНГАЛЕ (250 гр.) - 250 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -232,7 +234,7 @@
 											<h3><span class="color-red">ОВОЩИ ГРИЛЬ</span></h3>
 										</div>
 										<p>Состав: Баклажан, цукини, болгарский перец, грибы шампиньоны.</p><br>
-										<a class="button" >240 руб.</a>
+										<a class="button" >240 руб.</a><a class="button" onClick="orderAdd('ОВОЩИ ГРИЛЬ - 240 руб.')" style="cursor: pointer;background-color:#25D366;margin:10px"><i class="fa fa-plus"></i></a>
 									</div>
 								</div>
 							</div>
@@ -256,5 +258,14 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script type="text/javascript">
+document.getElementById("count").innerHTML = localStorage.length;
+function orderAdd(product){
+let value = ' ' + product + ' ';
+let key = new Date;
+localStorage.setItem(key, value);
+document.getElementById("count").innerHTML = localStorage.length;
+}
+</script>
 </body>
 </html>
