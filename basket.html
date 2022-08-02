@@ -113,8 +113,9 @@ function orderMessage(){
 var message = "";
 for (var i = 0, length = localStorage.length; i < length; i++) {
 message = message + localStorage.getItem(localStorage.key(i));
+const encodedUrl = encodeURI("https://wa.me/79288883178?text=" + message);
 }
-window.open(`https://wa.me/79288883178?text=${message}`, '_blank');
+window.open(encodedUrl, '_blank');
 }
 </script>
 </body>
