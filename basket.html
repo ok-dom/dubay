@@ -98,24 +98,36 @@
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
 <script type="text/javascript">
-var div = document.getElementById("order");
-for (var i = 0, length = localStorage.length; i < length; i++) {
+let div = document.getElementById("order");
+let products = [];
+let ps = JSON.parse(localStorage.getItem("dubai-basket"));
+	if(ps){
+	  products = ps;
+	}
+for (let i = 0; i < products.length; i++) {
 let p = document.createElement('p');
-p.innerText = localStorage.getItem(localStorage.key(i));//
+p.innerText = products[i];//
 div.appendChild(p);
 }
 function orderDel(){
-localStorage.clear();
+localStorage.removeItem("dubai-basket");
 div.innerHTML = '';//
 //location.reload();
 }
 function orderMessage(){
-var message = "";
-for (var i = 0, length = localStorage.length; i < length; i++) {
-message = message + localStorage.getItem(localStorage.key(i));
+let message = "";
+let products = [];
+let ps = JSON.parse(localStorage.getItem("dubai-basket"));
+	if(ps){
+	  products = ps;
+	}
+for (let i = 0; i < products.length; i++) {
+	message = message + products[i] + "\n";
 }
-const encodedUrl = encodeURI("https://wa.me/79288883178?text=" + message);
-window.open(encodedUrl, '_blank');
+
+message = `*Заказ:* ${message}`;
+const url = `https://wa.me/79288883178?text=${encodeURIComponent(message)}`;
+window.open(url);
 }
 </script>
 </body>

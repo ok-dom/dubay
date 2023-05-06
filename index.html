@@ -235,7 +235,12 @@
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
 <script type="text/javascript">
-document.getElementById("count").innerHTML = localStorage.length;
+let basket = [];
+let db = JSON.parse(localStorage.getItem("dubai-basket"));
+	if(db){
+	  basket = db;
+	}
+document.getElementById("count").innerHTML = basket.length;
 </script>
 </body>
 </html>
