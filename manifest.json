@@ -12,5 +12,8 @@
       "sizes": "192x192",
       "type": "image/png"
     }
-  ]
+  ],
+  "serviceworker": {
+    "src": "/dubay/service-worker.js"
+  }
 }
