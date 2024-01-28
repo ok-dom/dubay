@@ -42,6 +42,12 @@
 		<script src="js/css3-mediaqueries.js"></script>
     <![endif]-->
 
+	          <meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		  <meta name="apple-mobile-web-app-title" content="Dubai">
+		  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		  <link rel="manifest" href="manifest.json">
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -72,7 +78,8 @@
 			<ul>
                 <li><a href="index.html">Меню</a></li>
 				<li><a href="tel:+79288883178">Позвонить</a></li>
-				<li><a href="map.html">На карте</a></li>
+				<li><a href="map.html">Карта</a></li>
+				<li id="installButtonLi" style="display: none;"><a href="#" id="installButton">Установить</a></li>
             </ul>
 		</div>
 	</header>
@@ -251,6 +258,50 @@
 		</footer>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 </div>
+<script>
+  if ('serviceWorker' in navigator && 'BeforeInstallPromptEvent' in window) {
+    navigator.serviceWorker.register('/dubay/service-worker.js').then(function(registration) {
+      console.log('Service Worker (service-worker.js) registered with scope:', registration.scope);
+
+      // Wait for the 'beforeinstallprompt' event
+      window.addEventListener('beforeinstallprompt', function(event) {
+	// Prevent the default prompt
+	event.preventDefault();
+	// Store the event for later use
+	window.deferredPrompt = event;
+	
+	// Show your custom install button
+	document.getElementById('installButtonLi').style.display = 'block';
+      });
+    }).catch(function(error) {
+      console.error('Service Worker (service-worker.js) registration failed:', error);
+    });
+  }
+
+  // Добавьте обработчик события для кнопки "Установить"
+  document.getElementById('installButton').addEventListener('click', function() {
+    showInstallPrompt();
+  });
+
+  // Функция для показа предложения о добавлении на главный экран
+  function showInstallPrompt() {
+    if (window.deferredPrompt) {
+      // Show your custom install button or prompt
+      window.deferredPrompt.prompt();
+
+      // Wait for the user to respond to the prompt
+      window.deferredPrompt.userChoice.then(function(choiceResult) {
+	if (choiceResult.outcome === 'accepted') {
+	  console.log('User accepted the install prompt');
+	} else {
+	  console.log('User dismissed the install prompt');
+	}
+	// Clear the deferred prompt
+	window.deferredPrompt = null;
+      });
+    }
+  }
+</script>
 <script type="text/javascript">
 let basket = [];
 let db = JSON.parse(localStorage.getItem("dubai-basket"));
