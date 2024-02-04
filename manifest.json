@@ -4,8 +4,8 @@
   "description": "Dubai - Лучшие традиции европейской, японской, итальянской и вайнахской кухни!",
   "start_url": "/dubay/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#262626",
+  "theme_color": "#262626",
   "icons": [
     {
       "src": "/dubay/apple-touch-icon.png",
